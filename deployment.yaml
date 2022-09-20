@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: redis-test
+  name: redis-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-test
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: redis-test
+    spec:
+      containers:
+      - image: redis
+        name: redis
+        resources: {}
+status: {}
